@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --without=makefile
+
+override_dh_auto_build:
+	g++ main.cpp libmodprobe.cpp libmodprobe_ext.cpp -o parse-modules-load
